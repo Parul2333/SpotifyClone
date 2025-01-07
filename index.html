@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=pause" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="spotify"><span>Spotify</span></li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="songList">
+            <h1>Best of NCS - NO Copyright Sounds</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="s1.jpeg" alt="1">
+                    <span class="songName">Duniya</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="0" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s2.jpeg" alt="1">
+                    <span class="songName">Kho Gaye</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="1" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s3.jpeg" alt="1">
+                    <span class="songName">Kukkad</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="2"  class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s4.jpg" alt="1">
+                    <span class="songName">Saadi Galli Aaja</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="3"  class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s5.jpeg" alt="1">
+                    <span class="songName">Barbaadiyan</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="4" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s6.webp" alt="1">
+                    <span class="songName">Gulabi Aankhen</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="5" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s7.jpg" alt="1">
+                    <span class="songName">Haule Haule</span>
+                    <span class songlistplay><span class="timestamp">05:34<i  id="6" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s8.jpg" alt="1">
+                    <span class="songName">Jo Tum Mere Ho</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="7" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s9.jpg" alt="1">
+                    <span class="songName">Ambarsariya</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="8" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="s10.webp" alt="1">
+                    <span class="songName">Tujh Mein Rab Dikhta Hai</span>
+                    <span class songlistplay><span class="timestamp">05:34<i id="9" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" mac="100">
+        <div class="icons">
+            <!-- Font AWesome Icons -->
+            <!-- <i class="fa-solid fa-3x fa-backward-fast"></i> -->
+            <i class="fa-solid fa-3x fa-backward-step" id="previous"></i>
+            <i class="fa-regular fa-3x fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid fa-3x fa-forward-step" id="next"></i>
+            <!-- <i class="fa-solid fa-3x fa-forward-fast"></i> -->
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="Duniya" id="gif"> <span id="masterSongName">Duniya - Akhil, Dhvani Bhanushali</span> 
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/96e69e502f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
