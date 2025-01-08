@@ -71,22 +71,33 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
         const clickedSongIndex = parseInt(target.id);
 
         // If the same song is clicked again (toggle between play and pause)
-        if (songIndex === clickedSongIndex && !audioElement.paused) {
-            audioElement.pause();
-            target.classList.remove('fa-circle-pause');
-            target.classList.add('fa-circle-play');
-            masterPlay.classList.remove('fa-circle-pause');
-            masterPlay.classList.add('fa-circle-play');
-            gif.style.opacity = 0;
+        if (songIndex === clickedSongIndex) {
+            if (audioElement.paused) {
+                // Resume the song from where it was paused
+                audioElement.play();
+                target.classList.remove('fa-circle-play');
+                target.classList.add('fa-circle-pause');
+                masterPlay.classList.remove('fa-circle-play');
+                masterPlay.classList.add('fa-circle-pause');
+                gif.style.opacity = 1;
+            } else {
+                // Pause the song
+                audioElement.pause();
+                target.classList.remove('fa-circle-pause');
+                target.classList.add('fa-circle-play');
+                masterPlay.classList.remove('fa-circle-pause');
+                masterPlay.classList.add('fa-circle-play');
+                gif.style.opacity = 0;
+            }
         } else {
-            // Play the selected song
+            // Play a new song
             makeAllPlays(); // Reset all other play buttons
             songIndex = clickedSongIndex;
             target.classList.remove('fa-circle-play');
             target.classList.add('fa-circle-pause');
             audioElement.src = songs[songIndex].filePath;
             masterSongName.innerText = songs[songIndex].songName;
-            audioElement.currentTime = 0;
+            audioElement.currentTime = 0; // Start the new song from the beginning
             audioElement.play();
             gif.style.opacity = 1;
             masterPlay.classList.remove('fa-circle-play');
@@ -94,6 +105,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
         }
     });
 });
+
 
 
 document.getElementById('next').addEventListener('click',()=>{
